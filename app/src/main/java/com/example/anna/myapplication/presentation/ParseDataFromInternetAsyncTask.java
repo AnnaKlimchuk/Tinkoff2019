@@ -16,7 +16,7 @@ import java.net.URL;
 
 public class ParseDataFromInternetAsyncTask extends AsyncTask<Void, Void, Void> {
 
-    private static final String URL = "http://demo1155324.mockable.io/person/all";
+    private static final String URL = "https://api.tinkoff.ru/v1/news";
 
     private HttpURLConnection urlConnection = null;
     private BufferedReader reader = null;
@@ -59,24 +59,22 @@ public class ParseDataFromInternetAsyncTask extends AsyncTask<Void, Void, Void> 
     private void createPersonFromJson(String strJson) {
 
         JSONObject dataJsonObj = null;
-        String name = "", note = "", image = "";
+        String name = "", note = "";
 
         try {
             dataJsonObj = new JSONObject(strJson);
-            JSONArray persons = dataJsonObj.getJSONArray("persons");
+            JSONArray persons = dataJsonObj.getJSONArray("payload");
 
             for (int i = 0; i < persons.length(); i++) {
 
                 JSONObject newPerson = persons.getJSONObject(i);
 
-                image = newPerson.getString("image");
                 name = newPerson.getString("name");
-                note = newPerson.getString("info");
+                note = newPerson.getString("text");
 
                 Person person = new Person();
                 person.setName(name);
                 person.setNote(note);
-                person.setImageLink(image);
 
                 // Room
                 long personId = MyApplication.getPersonDao().loadAll().size() + 1;

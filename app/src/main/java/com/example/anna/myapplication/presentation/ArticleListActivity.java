@@ -6,12 +6,11 @@ import android.support.v4.app.Fragment;
 import android.support.v4.app.FragmentManager;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 
 import com.example.anna.myapplication.R;
 
-public class PersonListActivity extends AppCompatActivity {
+public class ArticleListActivity extends AppCompatActivity {
 
     public static final String ARG_PERSON_ID = "personId";
     private FragmentManager fragmentManager;
@@ -32,7 +31,7 @@ public class PersonListActivity extends AppCompatActivity {
 
         fragmentManager = getSupportFragmentManager();
         fragment = fragmentManager.findFragmentById(R.id.fragmentContainer1);
-        newFragment = new PersonListFragment();
+        newFragment = new ArticleListFragment();
 
         if (fragment == null) {
             fragmentManager.beginTransaction()
@@ -56,7 +55,7 @@ public class PersonListActivity extends AppCompatActivity {
             findViewById(R.id.fragmentContainer2).setVisibility(View.GONE);
 
             fragment = fragmentManager.findFragmentById(R.id.fragmentContainer1);
-            newFragment = new PersonListFragment();
+            newFragment = new ArticleListFragment();
 
             if (fragment == null) {
                 fragmentManager.beginTransaction()
@@ -67,7 +66,7 @@ public class PersonListActivity extends AppCompatActivity {
 
             findViewById(R.id.fragmentContainer1).setVisibility(View.VISIBLE);
         } else {
-            Intent startActivity = new Intent(PersonListActivity.this, MainActivity.class);
+            Intent startActivity = new Intent(ArticleListActivity.this, MainActivity.class);
             startActivity(startActivity);
         }
     }
@@ -89,7 +88,7 @@ public class PersonListActivity extends AppCompatActivity {
         bundle.putLong(ARG_PERSON_ID, personId_);
 
         fragment = fragmentManager.findFragmentById(R.id.fragmentContainer2);
-        newFragment = new PersonDetailFragment();
+        newFragment = new ArticleDetailFragment();
         newFragment.setArguments(bundle);
 
         if (fragment != null) {
@@ -118,7 +117,7 @@ public class PersonListActivity extends AppCompatActivity {
         bundle.putLong(ARG_PERSON_ID, personId_);
 
         fragment = fragmentManager.findFragmentById(R.id.fragmentContainer2);
-        newFragment = new PersonDetailFragment();
+        newFragment = new ArticleDetailFragment();
         newFragment.setArguments(bundle);
 
         if (fragment == null) {

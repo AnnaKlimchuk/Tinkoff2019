@@ -18,7 +18,7 @@ public class MainActivity extends AppCompatActivity {
 
         buttonProfile = findViewById(R.id.open_profile);
         buttonProfile.setOnClickListener(view -> {
-            Intent startActivity = new Intent(MainActivity.this, PersonListActivity.class);
+            Intent startActivity = new Intent(MainActivity.this, ArticleListActivity.class);
             startActivity(startActivity);
         });
     }

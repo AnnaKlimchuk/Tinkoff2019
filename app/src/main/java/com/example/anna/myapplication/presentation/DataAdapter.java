@@ -1,6 +1,5 @@
 package com.example.anna.myapplication.presentation;
 
-import android.net.Uri;
 import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -11,7 +10,6 @@ import java.util.List;
 
 import com.example.anna.myapplication.R;
 import com.example.anna.myapplication.domain.Person;
-import com.facebook.drawee.view.SimpleDraweeView;
 
 public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 

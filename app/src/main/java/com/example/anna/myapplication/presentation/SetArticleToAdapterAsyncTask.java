@@ -2,10 +2,7 @@ package com.example.anna.myapplication.presentation;
 
 import android.os.AsyncTask;
 
-import com.example.anna.myapplication.presentation.DataAdapter;
-import com.example.anna.myapplication.presentation.MyApplication;
-
-public class SetPersonToAdapterAsyncTask extends AsyncTask<DataAdapter, Void, Void> {
+public class SetArticleToAdapterAsyncTask extends AsyncTask<DataAdapter, Void, Void> {
 
     @Override
     protected Void doInBackground(DataAdapter ... adapters){

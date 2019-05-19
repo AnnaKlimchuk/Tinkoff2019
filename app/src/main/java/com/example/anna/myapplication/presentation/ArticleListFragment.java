@@ -10,7 +10,7 @@ import android.view.ViewGroup;
 
 import com.example.anna.myapplication.R;
 
-public class PersonListFragment extends Fragment {
+public class ArticleListFragment extends Fragment {
 
     private DataAdapter adapter;
     private RecyclerView recyclerView;
@@ -29,8 +29,8 @@ public class PersonListFragment extends Fragment {
         recyclerView.setLayoutManager(layoutManager);
 
         adapter = new DataAdapter(personId ->
-                ((PersonListActivity) getActivity()).changeFragment2(personId));
-        new SetPersonToAdapterAsyncTask().execute(adapter);
+                ((ArticleListActivity) getActivity()).changeFragment2(personId));
+        new SetArticleToAdapterAsyncTask().execute(adapter);
 
         recyclerView.setAdapter(adapter);
         return view;

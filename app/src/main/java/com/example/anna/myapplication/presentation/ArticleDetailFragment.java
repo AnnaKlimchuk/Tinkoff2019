@@ -11,7 +11,7 @@ import android.widget.TextView;
 import com.example.anna.myapplication.R;
 import com.example.anna.myapplication.domain.Person;
 
-public class PersonDetailFragment extends Fragment {
+public class ArticleDetailFragment extends Fragment {
 
     private TextView textDescription, personTextView;
     private static final String ARG_DESCRIPTION = "description";

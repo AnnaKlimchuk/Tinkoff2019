@@ -6,7 +6,7 @@
     android:layout_height="match_parent"
     android:orientation="horizontal"
     android:baselineAligned="false"
-    tools:context=".presentation.PersonListActivity">
+    tools:context=".presentation.ArticleListActivity">
 
     <FrameLayout
         android:id="@+id/fragmentContainer1"
