@@ -6,7 +6,7 @@ import android.arch.persistence.room.PrimaryKey;
 @Entity
 public class Person {
 
-    public final static String NOT_SPECIFIED_STRING = "";
+    private final static String NOT_SPECIFIED_STRING = "";
     private final static Integer NOT_SPECIFIED_LONG = -1;
 
     @PrimaryKey
@@ -18,7 +18,7 @@ public class Person {
         this.id = NOT_SPECIFIED_LONG;
         this.name = NOT_SPECIFIED_STRING;
         this.note = NOT_SPECIFIED_STRING;
-     }
+    }
 
     public String getName() {
         return this.name;

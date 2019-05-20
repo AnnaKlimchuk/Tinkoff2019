@@ -5,7 +5,6 @@ import android.arch.persistence.room.Room;
 
 import com.example.anna.myapplication.data.AppDatabase;
 import com.example.anna.myapplication.data.PersonDao;
-import com.facebook.drawee.backends.pipeline.Fresco;
 
 public class MyApplication extends Application {
 
@@ -19,8 +18,6 @@ public class MyApplication extends Application {
     public void onCreate() {
         super.onCreate();
 
-        Fresco.initialize(this);
-
         // ROOM
         database = Room.databaseBuilder(this, AppDatabase.class, "database")
                 .build();
@@ -32,5 +29,3 @@ public class MyApplication extends Application {
         new SetDataIfNeededAsyncTask().execute();
     }
 }
-
-
